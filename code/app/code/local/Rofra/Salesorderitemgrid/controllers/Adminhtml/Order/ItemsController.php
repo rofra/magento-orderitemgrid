@@ -1,16 +1,16 @@
 <?php
 /**
  * @category    Graphic Sourcecode
- * @package     Ikantam_KnowledgeBase
+ * @package     Rofra_Salesorderitemgrid
  * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
-class Ikantam_KnowledgeBase_Adminhtml_Order_ItemsController extends Mage_Adminhtml_Controller_Action
+class Rofra_Salesorderitemgrid_Adminhtml_Order_ItemsController extends Mage_Adminhtml_Controller_Action
 {
     public function indexAction()
     {
         $this->loadLayout()->_setActiveMenu('sales/order_items');
-        $this->_addContent($this->getLayout()->createBlock('ikantamknowledgebase/adminhtml_order_items'));
+        $this->_addContent($this->getLayout()->createBlock('salesorderitemgrid/adminhtml_order_items'));
         $this->getLayout()->getBlock('head')->setTitle($this->__('Order Items'));
         $this->renderLayout();
     }
@@ -34,7 +34,7 @@ class Ikantam_KnowledgeBase_Adminhtml_Order_ItemsController extends Mage_Adminht
     public function exportCsvAction()
     {
         $fileName   = 'sales_order_items.csv';
-        $content    = $this->getLayout()->createBlock('ikantamknowledgebase/adminhtml_order_items_grid')->getCsv();
+        $content    = $this->getLayout()->createBlock('salesorderitemgrid/adminhtml_order_items_grid')->getCsv();
 
         $this->_sendUploadResponse($fileName, $content);
     }
@@ -45,7 +45,7 @@ class Ikantam_KnowledgeBase_Adminhtml_Order_ItemsController extends Mage_Adminht
     public function exportXmlAction()
     {
         $fileName   = 'sales_order_items.xml';
-        $content    = $this->getLayout()->createBlock('ikantamknowledgebase/adminhtml_order_items_grid')->getXml();
+        $content    = $this->getLayout()->createBlock('salesorderitemgrid/adminhtml_order_items_grid')->getXml();
 
         $this->_sendUploadResponse($fileName, $content);
     }

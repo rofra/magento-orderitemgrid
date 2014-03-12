@@ -1,7 +1,7 @@
 <?php
 /**
  * @category    Graphic Sourcecode
- * @package     Ikantam_KnowledgeBase
+ * @package     Rofra_Salesorderitemgrid
  * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */

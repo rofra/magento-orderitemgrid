@@ -1,7 +1,7 @@
 <?php
 /**
  * @category    Graphic Sourcecode
- * @package     Ikantam_KnowledgeBase
+ * @package     Rofra_Salesorderitemgrid
  * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
@@ -23,9 +23,9 @@ $options = array(
 );
 
 foreach ($entities as $entity) {
-    $installer->addAttribute($entity, Ikantam_KnowledgeBase_Helper_Attributes::COLUMN1, $options);
-    $installer->addAttribute($entity, Ikantam_KnowledgeBase_Helper_Attributes::COLUMN2, $options);
-    $installer->addAttribute($entity, Ikantam_KnowledgeBase_Helper_Attributes::COLUMN3, $options);
+    $installer->addAttribute($entity, Rofra_Salesorderitemgrid_Helper_Attributes::COLUMN1, $options);
+    $installer->addAttribute($entity, Rofra_Salesorderitemgrid_Helper_Attributes::COLUMN2, $options);
+    $installer->addAttribute($entity, Rofra_Salesorderitemgrid_Helper_Attributes::COLUMN3, $options);
 }
 
 

@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
 	<modules>
-		<Ikantam_KnowledgeBase>
+		<Rofra_Salesorderitemgrid>
 			<version>1.0.2</version>
-		</Ikantam_KnowledgeBase>
+		</Rofra_Salesorderitemgrid>
 	</modules>
 	<global>
 	
@@ -19,34 +19,34 @@
 			</quote>
 		</sales>
 		<blocks>
-			<ikantamknowledgebase>
-				<class>Ikantam_KnowledgeBase_Block</class>
-			</ikantamknowledgebase>
+			<salesorderitemgrid>
+				<class>Rofra_Salesorderitemgrid_Block</class>
+			</salesorderitemgrid>
 		</blocks>
 		<helpers>
-			<ikantamknowledgebase>
-				<class>Ikantam_KnowledgeBase_Helper</class>
-			</ikantamknowledgebase>
+			<salesorderitemgrid>
+				<class>Rofra_Salesorderitemgrid_Helper</class>
+			</salesorderitemgrid>
 		</helpers>
 		<resources>
-			<ikantamknowledgebase_setup>
+			<salesorderitemgrid_setup>
 				<setup>
-					<module>Ikantam_KnowledgeBase</module>
+					<module>Rofra_Salesorderitemgrid</module>
 				</setup>
 				<connection>
 					<use>core_setup</use>
 				</connection>
-			</ikantamknowledgebase_setup>
-			<ikantamknowledgebase_write>
+			</salesorderitemgrid_setup>
+			<salesorderitemgrid_write>
 				<connection>
 					<use>core_write</use>
 				</connection>
-			</ikantamknowledgebase_write>
-			<ikantamknowledgebase_read>
+			</salesorderitemgrid_write>
+			<salesorderitemgrid_read>
 				<connection>
 					<use>core_read</use>
 				</connection>
-			</ikantamknowledgebase_read>
+			</salesorderitemgrid_read>
 		</resources>
 	</global>
 	<admin>
@@ -54,7 +54,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <ikantamknowledgebase before="Mage_Adminhtml">Ikantam_KnowledgeBase_Adminhtml</ikantamknowledgebase>
+                        <salesorderitemgrid before="Mage_Adminhtml">Rofra_Salesorderitemgrid_Adminhtml</salesorderitemgrid>
                     </modules>
                 </args>
             </adminhtml>
@@ -63,17 +63,17 @@
 	<adminhtml>
 		<translate>
 			<modules>
-				<ikantamknowledgebase>
+				<salesorderitemgrid>
 					<files>
-						<default>Ikantam_KnowledgeBase.csv</default>
+						<default>Rofra_Salesorderitemgrid.csv</default>
 					</files>
-				</ikantamknowledgebase>
+				</salesorderitemgrid>
 			</modules>
 		</translate>
         <menu>
             <sales>
                 <children>
-                    <order_items translate="title" module="ikantamknowledgebase">
+                    <order_items translate="title" module="salesorderitemgrid">
                         <title>Order Items</title>
                         <sort_order>11</sort_order>
                         <action>adminhtml/order_items/index</action>
@@ -83,9 +83,9 @@
         </menu>
         <layout>
 			<updates>
-				<ikantamknowledgebase>
-					<file>ikantamknowledgebase.xml</file>
-				</ikantamknowledgebase>
+				<salesorderitemgrid>
+					<file>salesorderitemgrid.xml</file>
+				</salesorderitemgrid>
 			</updates>
 		</layout>
 		<acl>
@@ -99,9 +99,9 @@
 							<children>
 								<config>
 									<children>
-										<ikantamknowledgebase>
+										<salesorderitemgrid>
 											<title>Sales Order Items Grid</title>
-										</ikantamknowledgebase>
+										</salesorderitemgrid>
 									</children>
 								</config>
 							</children>
@@ -112,7 +112,7 @@
 		</acl>
     </adminhtml>
     <default>
-        <ikantamknowledgebase>
+        <salesorderitemgrid>
             <columns>
                 <showsstatus>1</showsstatus>
                 <showbillingname>1</showbillingname>
@@ -133,6 +133,6 @@
                 <limit>50</limit>
                 <page>1</page>
             </defaults>
-        </ikantamknowledgebase>
+        </salesorderitemgrid>
     </default>
 </config>

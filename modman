@@ -3,8 +3,8 @@
 # author: Rodolphe Franceschi
 
 # Sales Order Item Grid
-code/app/code/local/Ikantam/KnowledgeBase/ app/code/local/Ikantam/KnowledgeBase/
+code/app/code/local/Rofra/Salesorderitemgrid/ app/code/local/Rofra/Salesorderitemgrid/
 code/app/locale/fr_FR/* app/locale/fr_FR/
 code/app/design/adminhtml/default/default/layout/ikantamknowledgebase.xml app/design/adminhtml/default/default/layout/ikantamknowledgebase.xml
 code/app/design/adminhtml/default/default/template/ikantamknowledgebase app/design/adminhtml/default/default/template/ikantamknowledgebase
-code/app/etc/modules/Ikantam_KnowledgeBase.xml app/etc/modules/Ikantam_KnowledgeBase.xml
+code/app/etc/modules/Rofra_Salesorderitemgrid.xml app/etc/modules/Rofra_Salesorderitemgrid.xml

@@ -1,11 +1,11 @@
 <?php
 /**
  * @category    Graphic Sourcecode
- * @package     Ikantam_KnowledgeBase
+ * @package     Rofra_Salesorderitemgrid
  * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
-class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items extends Mage_Adminhtml_Block_Widget_Grid_Container
+class Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
     public function __construct()
     {

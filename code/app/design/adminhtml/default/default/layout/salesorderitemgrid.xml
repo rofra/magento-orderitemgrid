@@ -2,7 +2,7 @@
 <layout>
 	<adminhtml_order_items_index>
         <reference name="js">
-            <block type="core/template" template="ikantamknowledgebase/inline-edit.phtml" />
+            <block type="core/template" template="salesorderitemgrid/inline-edit.phtml" />
         </reference>
 	</adminhtml_order_items_index>
 </layout>

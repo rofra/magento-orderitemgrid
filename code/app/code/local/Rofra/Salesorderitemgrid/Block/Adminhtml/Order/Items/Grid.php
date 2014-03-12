@@ -1,11 +1,11 @@
 <?php
 /**
  * @category    Graphic Sourcecode
- * @package     Ikantam_KnowledgeBase
+ * @package     Rofra_Salesorderitemgrid
  * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
-class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminhtml_Block_Widget_Grid
+class Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
 
     public function __construct()
@@ -18,8 +18,8 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
 
     protected function prepareDefaults()
     {
-        $this->setDefaultLimit( Mage::getStoreConfig( 'ikantamknowledgebase/defaults/limit' ) );
-        $this->setDefaultPage( Mage::getStoreConfig( 'ikantamknowledgebase/defaults/page' ) );
+        $this->setDefaultLimit( Mage::getStoreConfig( 'salesorderitemgrid/defaults/limit' ) );
+        $this->setDefaultPage( Mage::getStoreConfig( 'salesorderitemgrid/defaults/page' ) );
     }
 
     protected function _prepareCollection()
@@ -40,7 +40,7 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
     protected function _prepareColumns()
     {
         $this->addColumn('item_id', array(
-                'header' => Mage::helper('ikantamknowledgebase')->__('ID'),
+                'header' => Mage::helper('salesorderitemgrid')->__('ID'),
                 'sortable' => true,
                 'width' => '60',
                 'index' => 'item_id'
@@ -51,10 +51,10 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                 'sortable' => true,
                 'width' => '60',
                 'index' => 'increment_id',
-                'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Order',
+                'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Order',
         ));
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showsstatus')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showsstatus')) {
             $this->addColumn('status', array(
                     'header' => Mage::helper('sales')->__('Order Status'),
                     'index' => 'status',
@@ -74,7 +74,7 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                 'type'  => 'datetime'
         ));
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showbillingname')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showbillingname')) {
             $this->addColumn('billing_name', array(
                     'header' => Mage::helper('sales')->__('Bill to Name'),
                     'sortable' => true,
@@ -82,7 +82,7 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showshippingname')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showshippingname')) {
             $this->addColumn('shipping_name', array(
                     'header' => Mage::helper('sales')->__('Ship to Name'),
                     'sortable' => true,
@@ -91,10 +91,10 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
         }
 
         $this->addColumn('sku', array(
-                'header' => Mage::helper('ikantamknowledgebase')->__('SKU'),
+                'header' => Mage::helper('salesorderitemgrid')->__('SKU'),
                 'sortable' => true,
                 'index' => 'sku',
-                'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Sku',
+                'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Sku',
         ));
 
         $this->addColumn('name', array(
@@ -103,92 +103,92 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                 'index' => 'name'
         ));
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtyordered')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtyordered')) {
             $this->addColumn('qty_ordered', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Ordered'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Ordered'),
                     'sortable' => true,
                     'index'    => 'qty_ordered',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtylive')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtylive')) {
             $this->addColumn('si_qty', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Live'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Live'),
                     'sortable' => true,
                     'index'    => 'si_qty',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtycancelled')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtycancelled')) {
             $this->addColumn('qty_canceled', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Cancelled'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Cancelled'),
                     'sortable' => true,
                     'index'    => 'qty_canceled',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtyshipped')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtyshipped')) {
             $this->addColumn('qty_shipped', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Shipped'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Shipped'),
                     'sortable' => true,
                     'index'    => 'qty_shipped',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtyrefounded')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtyrefounded')) {
             $this->addColumn('qty_refunded', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Refunded'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Refunded'),
                     'sortable' => true,
                     'index'    => 'qty_refunded',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtybackordered')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/columns/showqtybackordered')) {
             $this->addColumn('qty_backordered', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Qty Backordered'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Qty Backordered'),
                     'sortable' => true,
                     'index'    => 'qty_backordered',
                     'type'     => 'currency',
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/extracolumns/showextracolumn1')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/extracolumns/showextracolumn1')) {
             $this->addColumn('column1', array(
-                    'header'    => Mage::helper('ikantamknowledgebase')->__('Column 1'),
+                    'header'    => Mage::helper('salesorderitemgrid')->__('Column 1'),
                     'align'     => 'center',
                     'sortable'  => true,
-                    'renderer'  => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
+                    'renderer'  => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
                     'index'     => 'column1',
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/extracolumns/showextracolumn2')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/extracolumns/showextracolumn2')) {
             $this->addColumn('column2', array(
-                    'header'     => Mage::helper('ikantamknowledgebase')->__('Column 2'),
+                    'header'     => Mage::helper('salesorderitemgrid')->__('Column 2'),
                     'align'      => 'center',
                     'sortable'   => true,
-                    'renderer'   => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
+                    'renderer'   => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
                     'index'      => 'column2'
             ));
         }
 
-        if (Mage::getStoreConfig('ikantamknowledgebase/extracolumns/showextracolumn3')) {
+        if (Mage::getStoreConfig('salesorderitemgrid/extracolumns/showextracolumn3')) {
             $this->addColumn('column3', array(
-                    'header'   => Mage::helper('ikantamknowledgebase')->__('Column 3'),
+                    'header'   => Mage::helper('salesorderitemgrid')->__('Column 3'),
                     'align'    => 'center',
                     'sortable' => true,
-                    'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
                     'index'    => 'column3'
             ));
         }

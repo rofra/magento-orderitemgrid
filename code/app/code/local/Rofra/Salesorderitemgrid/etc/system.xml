@@ -1,14 +1,14 @@
 
 <config>
 	<tabs>
-		<rofra translate="label" module="ikantamknowledgebase">
+		<rofra translate="label" module="salesorderitemgrid">
 			<label>ROFRA Extensions</label>
 			<sort_order>900</sort_order>
 		</rofra>
 	</tabs>
 	<sections>
-		<ikantamknowledgebase translate="label"
-			module="ikantamknowledgebase">
+		<salesorderitemgrid translate="label"
+			module="salesorderitemgrid">
 			<label>Sales Order Items Grid</label>
 			<tab>rofra</tab>
 			<frontend_type>text</frontend_type>
@@ -167,6 +167,6 @@
 					</fields>
 				</defaults>
 			</groups>
-		</ikantamknowledgebase>
+		</salesorderitemgrid>
 	</sections>
 </config>
