@@ -13,6 +13,8 @@ Module fully configurable from "Configuration > ROFRA Extensions > Sales Order I
   * Logout
   * Log in again
 
+If you are using modman, go to System => Configuration => Developer => Template Settings Tab
+  Set Allow Symlinks to "Yes"
 
 ## License
 
