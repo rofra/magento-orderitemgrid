@@ -1,5 +1,5 @@
 # Sales Order Items Grid
-New Grid for viewing the content of the sales/order_item table, the item lines of the orders. It permits you to consult core datas.
+New Grid for viewing the content of the sales/order_item table, the item lines of the orders. It permits you to consult core datas. It allows to you directly save in order items lines custom datas in three custom columns (may be usefull for a tiny ERP).
 
 Module fully configurable from "Configuration > ROFRA Extensions > Sales Order Items Grid"
 
@@ -18,7 +18,11 @@ If you are using modman, go to System => Configuration => Developer => Template 
 
 ## How to Use
 A new entry in "Sales" menu will appear as "Order Items".
-A new tab is available in System > Configuration > ROFRA Extensions where you can customize your tabs options
+A new tab is available in System > Configuration > ROFRA Extensions where you can customize your tabs options.
+
+For Extra columns (Columns 1 to 3), autosaving is available on Blur Event, for saving you can
+  * Type "Enter" 
+  * Click on any other part of the page
 
 ## License
 
