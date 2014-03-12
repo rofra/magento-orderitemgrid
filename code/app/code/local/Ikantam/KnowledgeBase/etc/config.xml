@@ -118,9 +118,9 @@
                 <showbillingname>1</showbillingname>
                 <showshippingname>1</showshippingname>
                 <showqtyordered>1</showqtyordered>
-                <showqtycancelled>0</showqtycancelled>
-                <showqtyshipped>0</showqtyshipped>
-                <showqtyrefounded>0</showqtyrefounded>
+                <showqtycancelled>1</showqtycancelled>
+                <showqtyshipped>1</showqtyshipped>
+                <showqtyrefounded>1</showqtyrefounded>
                 <showqtybackordered>0</showqtybackordered>
                 <showqtylive>1</showqtylive>
             </columns>

@@ -2,7 +2,7 @@
 /**
  * @category    Graphic Sourcecode
  * @package     Ikantam_KnowledgeBase
- * @license     http://opensource.org/licenses/OSL-3.0
+ * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
 

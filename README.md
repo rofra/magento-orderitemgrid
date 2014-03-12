@@ -30,6 +30,7 @@ Here is a list of features:
   * Column Grid columns selection in configuration
   * Auto Saving for custom colums
   * Direct links to Order and Product from grid
+  * Auto-installation script for three new columns in sales_flat_item table
   * CSV / XML Export of datas in the grid
   
 ## License

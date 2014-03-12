@@ -2,7 +2,7 @@
 /**
  * @category    Graphic Sourcecode
  * @package     Ikantam_KnowledgeBase
- * @license     http://opensource.org/licenses/OSL-3.0
+ * @license     http://www.apache.org/licenses/LICENSE-2.0
  * @author      Rodolphe Franceschi <rodolphe.franceschi@gmail.com>
  */
 class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminhtml_Block_Widget_Grid
@@ -54,6 +54,17 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                 'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Order',
         ));
 
+        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showsstatus')) {
+            $this->addColumn('status', array(
+                    'header' => Mage::helper('sales')->__('Order Status'),
+                    'index' => 'status',
+                    'filter_index' => 'status',
+                    'type'  => 'options',
+                    'width' => '70px',
+                    'options' => Mage::getSingleton('sales/order_config')->getStatuses(),
+            ));
+        }
+
         $this->addColumn('created_at', array(
                 'header' => Mage::helper('sales')->__('Purchased On'),
                 'sortable' => true,
@@ -90,24 +101,6 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                 'header' => Mage::helper('catalog')->__('Name'),
                 'sortable' => true,
                 'index' => 'name'
-        ));
-
-        $this->addColumn('marque_text', array(
-                'header' => Mage::helper('ikantamknowledgebase')->__('Marque'),
-                'sortable' => true,
-                'index' => 'marque_text'
-        ));
-
-        $this->addColumn('scollection', array(
-                'header' => Mage::helper('ikantamknowledgebase')->__('Collection'),
-                'sortable' => true,
-                'index' => 'scollection'
-        ));
-
-        $this->addColumn('taille_text', array(
-                'header' => Mage::helper('ikantamknowledgebase')->__('Size'),
-                'sortable' => true,
-                'index' => 'taille_text'
         ));
 
         if (Mage::getStoreConfig('ikantamknowledgebase/columns/showqtyordered')) {
@@ -167,17 +160,6 @@ class Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid extends Mage_Adminh
                     'index'    => 'qty_backordered',
                     'type'     => 'currency',
                     'renderer' => 'Ikantam_KnowledgeBase_Block_Adminhtml_Order_Items_Grid_Renderer_Itemqty',
-            ));
-        }
-
-        if (Mage::getStoreConfig('ikantamknowledgebase/columns/showsstatus')) {
-            $this->addColumn('status', array(
-                    'header' => Mage::helper('sales')->__('Order Status'),
-                    'index' => 'status',
-                    'filter_index' => 'status',
-                    'type'  => 'options',
-                    'width' => '70px',
-                    'options' => Mage::getSingleton('sales/order_config')->getStatuses(),
             ));
         }
 
