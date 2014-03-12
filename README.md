@@ -16,6 +16,10 @@ Module fully configurable from "Configuration > ROFRA Extensions > Sales Order I
 If you are using modman, go to System => Configuration => Developer => Template Settings Tab
   Set Allow Symlinks to "Yes"
 
+## How to Use
+A new entry in "Sales" menu will appear as "Order Items".
+A new tab is available in System > Configuration > ROFRA Extensions where you can customize your tabs options
+
 ## License
 
    Copyright 2014 Rodolphe Franceschi
