@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout>
+	<adminhtml_order_items_index>
+        <reference name="js">
+            <block type="core/template" template="ikantamknowledgebase/inline-edit.phtml" />
+        </reference>
+	</adminhtml_order_items_index>
+</layout>

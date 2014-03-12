@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ikantam_KnowledgeBase>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Ikantam_KnowledgeBase>
+    </modules>
+</config>

@@ -1,0 +1,172 @@
+
+<config>
+	<tabs>
+		<rofra translate="label" module="ikantamknowledgebase">
+			<label>ROFRA Extensions</label>
+			<sort_order>900</sort_order>
+		</rofra>
+	</tabs>
+	<sections>
+		<ikantamknowledgebase translate="label"
+			module="ikantamknowledgebase">
+			<label>Sales Order Items Grid</label>
+			<tab>rofra</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>0</show_in_store>
+			<groups>
+				<about translate="label">
+					<label>About This Extension</label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+							<comment>
+	          		<![CDATA[
+						<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+						This module was developed by <a href="http://www.exvoto.org" target="_blank">Rodolphe Franceschi</a> - <b>Architect & Magento Extension Specialist</b>. <br />
+						<br/>For docs & examples refer to module related page on Magento Connect.
+						<br/>Need an order summary export or more features? Feel free to contact me directly by email. 
+						</div>
+					  ]]>
+							</comment>
+				</about>
+				<columns translate="label">
+					<label>Grid Columns Options</label>
+					<sort_order>50</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<fields>
+						<showsstatus translate="label">
+							<label>Show "Order Status"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showsstatus>
+						<showbillingname translate="label">
+							<label>Show "Billing Name"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showbillingname>
+						<showqtyordered translate="label">
+							<label>Show "Qty Ordered"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtyordered>
+						<showshippingname translate="label">
+							<label>Show "Shipping Name"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showshippingname>
+						<showqtycancelled translate="label">
+							<label>Show "Qty Cancelled"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtycancelled>
+						<showqtyshipped translate="label">
+							<label>Show "Qty Shipped"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtyshipped>
+						<showqtyrefounded translate="label">
+							<label>Show "Qty Refounded"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtyrefounded>
+						<showqtybackordered translate="label">
+							<label>Show "Qty Backordered"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtybackordered>
+						<showqtylive translate="label">
+							<label>Show "Qty Live"</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showqtylive>
+					</fields>
+				</columns>
+				<extracolumns translate="label">
+					<label>Extra-columns Options</label>
+					<sort_order>200</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<fields>
+						<showextracolumn1 translate="label">
+							<label>Show Extra Column 1 (textual)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showextracolumn1>
+						<showextracolumn2 translate="label">
+							<label>Show Extra Column 2 (textual)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showextracolumn2>
+						<showextracolumn3 translate="label">
+							<label>Show Extra Column 3 (textarea)</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</showextracolumn3>
+					</fields>
+				</extracolumns>
+				<defaults translate="label">
+					<label>Default Grid State</label>
+					<sort_order>400</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<fields>
+						<limit translate="label">
+							<label>Page Size</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</limit>
+						<page translate="label">
+							<label>Initial Page Number</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+						</page>
+					</fields>
+				</defaults>
+			</groups>
+		</ikantamknowledgebase>
+	</sections>
+</config>

@@ -1,0 +1,6 @@
+# modman module description
+# see https://github.com/colinmollenhour/modman/ for more info
+# author: Rodolphe Franceschi
+
+# Sales Order Item Grid
+code/app/* app/

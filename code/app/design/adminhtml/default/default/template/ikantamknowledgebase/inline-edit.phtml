@@ -1,0 +1,23 @@
+<script type="text/javascript">
+function updateField(button, fieldId)
+{
+	val = $(button).previous('input').getValue();
+	name = $(button).previous('input').getAttribute('name');
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/ajaxUpdateField') ?>', {
+        method: 'post',
+        parameters: { id: fieldId, title: val, attr: name}
+    });
+}
+</script>
+
+<script type="text/javascript">
+function updateTextualField(input, fieldId)
+{
+	val = $(input).getValue();
+	name = $(input).getAttribute('name');
+    new Ajax.Request('<?php echo Mage::helper('adminhtml')->getUrl('*/*/ajaxUpdateField') ?>', {
+        method: 'post',
+        parameters: { id: fieldId, title: val, attr: name}
+    });
+}
+</script>
