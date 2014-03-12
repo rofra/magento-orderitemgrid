@@ -9,9 +9,9 @@ class Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items extends Mage_Adminhtm
 {
     public function __construct()
     {
-        $this->_blockGroup = 'ikantamknowledgebase';
+        $this->_blockGroup = 'salesorderitemgrid';
         $this->_controller = 'adminhtml_order_items';
-        $this->_headerText = Mage::helper('ikantamknowledgebase')->__('Order Items');
+        $this->_headerText = Mage::helper('salesorderitemgrid')->__('Order Items');
 
         parent::__construct();
         $this->_removeButton('add');
