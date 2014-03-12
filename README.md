@@ -24,6 +24,14 @@ For Extra columns (Columns 1 to 3), autosaving is available on Blur Event, for s
   * Type "Enter" 
   * Click on any other part of the page
 
+## Features
+Here is a list of features:
+  * Full Grid for Order Items
+  * Column Grid columns selection in configuration
+  * Auto Saving for custom colums
+  * Direct links to Order and Product from grid
+  * CSV / XML Export of datas in the grid
+  
 ## License
 
    Copyright 2014 Rodolphe Franceschi
