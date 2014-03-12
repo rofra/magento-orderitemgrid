@@ -188,7 +188,7 @@ class Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid extends Mage_Adm
                     'header'   => Mage::helper('salesorderitemgrid')->__('Column 3'),
                     'align'    => 'center',
                     'sortable' => true,
-                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_InputInline',
+                    'renderer' => 'Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid_Renderer_TextareaInline',
                     'index'    => 'column3'
             ));
         }
