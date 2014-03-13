@@ -3,7 +3,7 @@
     <modules>
         <Rofra_Salesorderitemgrid>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Rofra_Salesorderitemgrid>
     </modules>
 </config>

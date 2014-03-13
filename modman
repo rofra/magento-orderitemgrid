@@ -3,8 +3,8 @@
 # author: Rodolphe Franceschi
 
 # Sales Order Item Grid
-code/app/code/local/Rofra/Salesorderitemgrid/ app/code/local/Rofra/Salesorderitemgrid/
-code/app/locale/fr_FR/* app/locale/fr_FR/
+code/app/code/community/Rofra/Salesorderitemgrid/ app/code/community/Rofra/Salesorderitemgrid/
+code/app/locale/fr_FR/Rofra_Salesorderitemgrid.csv app/locale/fr_FR/Rofra_Salesorderitemgrid.csv
 code/app/design/adminhtml/default/default/layout/salesorderitemgrid.xml app/design/adminhtml/default/default/layout/salesorderitemgrid.xml
 code/app/design/adminhtml/default/default/template/salesorderitemgrid app/design/adminhtml/default/default/template/salesorderitemgrid
 code/app/etc/modules/Rofra_Salesorderitemgrid.xml app/etc/modules/Rofra_Salesorderitemgrid.xml
