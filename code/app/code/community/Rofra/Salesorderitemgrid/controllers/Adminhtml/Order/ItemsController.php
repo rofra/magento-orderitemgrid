@@ -10,7 +10,7 @@ class Rofra_Salesorderitemgrid_Adminhtml_Order_ItemsController extends Mage_Admi
     public function indexAction()
     {
         $this->loadLayout()->_setActiveMenu('sales/order_items');
-        $this->_addContent($this->getLayout()->createBlock('salesorderitemgrid/adminhtml_order_items'));
+        $this->_addContent($this->getLayout()->createBlock('salesorderitemgrid/adminhtml_order_items', 'order.item.grid'));
         $this->getLayout()->getBlock('head')->setTitle($this->__('Order Items'));
         $this->renderLayout();
     }
