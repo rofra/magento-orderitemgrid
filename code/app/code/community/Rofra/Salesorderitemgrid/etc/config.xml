@@ -95,6 +95,12 @@
 				</all>
 				<admin>
 					<children>
+						<sales translate="title" module="salesorderitemgrid">
+							<title>Sales</title>
+							<children>
+								<order_items translate="title"><title>Sales Order Items Grid</title><sort_order>2</sort_order></order_items>
+							</children>
+						</sales>
 						<system>
 							<children>
 								<config>
