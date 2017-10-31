@@ -26,7 +26,6 @@ class Rofra_Salesorderitemgrid_Block_Adminhtml_Order_Items_Grid extends Mage_Adm
     {
         $collection = Mage::getModel('sales/order_item')->getCollection();
         $collection->join(array('og' =>'sales/order_grid'), 'main_table.order_id = og.entity_id', array('billing_name', 'shipping_name', 'increment_id', 'status', 'og_created_at' =>'og.created_at') );
-        $collection->join(array('si' => 'cataloginventory/stock_item'), 'main_table.product_id = si.product_id', array('si_qty' => 'si.qty'));
 
         // One line per entry (configurable / simple management)
         $collection->addAttributeToFilter('parent_item_id', array('is' => new Zend_Db_Expr('null')));
